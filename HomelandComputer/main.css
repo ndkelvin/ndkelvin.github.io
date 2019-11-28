@@ -1,0 +1,111 @@
+/*Basic reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.drop-down, .checkbox{
+    display: none;
+}
+
+body{
+    background-color: rgb(117, 113, 52);
+}
+#wrapper{
+    max-width: 1000px;
+    margin:auto;
+    font-family: helvetica;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(com.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+   
+}
+
+#header{
+    background-color: #220808;
+    text-align: center;
+    color: rgba(200, 209, 69, 0.918);
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll{
+    width: 200px;
+}
+
+#content{
+    display: flex;
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+}
+
+#content .inner-content{
+    margin: auto;
+}
+
+.inner-content h1{
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn{
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    margin-top: 5px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.list{
+    display: flex;
+    list-style-type: none;
+    background: #323232;
+    justify-content: center;
+    color: #ffff;
+}
+
+.list li{
+    padding: 20px;
+    cursor: pointer;
+}
+
+.list li:not(:last-child){
+    border-right: 1px solid gray;
+}
+
+.list li:hover{
+    background-color: gray;
+    flex: 0.2;
+}
+
+#footer{
+    padding: 20px 0px;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width:600px){
+    .drop-down{
+        display: flex;
+        font-size: 40px;
+        justify-content: flex-end;
+        cursor: pointer;
+        color: gainsboro;
+    }
+
+    .list{
+        display: none;
+    }
+
+    input[type=checkbox]:checked ~
+    .list{
+        display:block;
+        transition: all 1s ease;
+        
+    }
+}
