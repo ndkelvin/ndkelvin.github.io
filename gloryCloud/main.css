@@ -1,0 +1,232 @@
+html, body {
+    font-family: helvetica;
+    margin: 0;
+    padding: 0;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+#wrapper{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto 70px auto auto auto 50px;
+    grid-template-areas:
+        "header header header header"
+        "side nav nav nav"
+        "side main main main"
+        "main2 main2 main2 main2"
+        "img img img img"
+        "footer footer footer footer"
+    ;
+}
+
+#header{
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(34, 30, 58);
+    grid-area: header;
+    text-align: center;
+}
+
+.logo, .name-and-moto h1{
+    margin: 5px 5px;
+}
+.church-menu{
+    color: #fff;
+    list-style-type: none;
+    text-align: center;
+}
+
+.church-menu li{
+    display: inline;
+    padding: 20px 10px;
+    flex: 1;
+    text-align: center;
+    transition: all 1s ease; 
+}
+
+.church-menu li:hover{
+    background-color: gray;
+    opacity: 0.5;
+    padding: 20px 35px;
+}
+#menu, .menu{
+    display: none;
+}
+#header .moto{
+    width: 400px;
+    margin-top: 0px;
+    margin-left: 50px;
+}
+
+.logo img{
+    width: 70px;
+    height: 70px;
+    margin: 10px 0px;
+}
+
+#nav{
+    background-color: #223455;
+    padding: 10px;
+    grid-area:nav;
+}
+
+#left{
+    background-color: rgb(228, 236, 236);
+    padding: 10px;
+    grid-area: side;
+    text-align: justify;
+}
+
+#main{
+    background-color:rgb(12, 98, 138);
+    display: flex;
+    padding: 10px;
+    grid-area: main;
+    background: linear-gradient(rgba(42, 8, 122, 0.5), rgba(14, 12, 131, 0.7)), url("images/praise.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main2{
+    padding: 8px;
+    text-align: justify;
+    background-color: rgb(240, 235, 227);
+    grid-area: main2;
+}
+
+#image-gallery{
+    grid-area: img;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+#image-gallery img{
+    width: 300px;
+    height: 200px;
+    border: 2px solid whitesmoke;
+
+}
+
+.inner-heading{
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.inner-heading h1{
+    text-shadow: 2px 2px  black;
+}
+
+.btn-grp button{
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid whitesmoke;
+}
+
+.btn-grp button:hover{
+    transition: all 1s ease-in;
+    background-color: rgb(214, 20, 30);
+    
+}
+
+#footer{
+    background-color: rgb(15, 26, 25);
+    padding: 10px;
+    grid-area: footer;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width:900px){
+    #wrapper{
+        grid-template-rows: 70px 100px auto auto auto 500px;
+        grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "main2 main2 main2 main2"
+        "img img img img"
+        "side side side side"
+        "main main main main"
+        "footer footer footer footer";
+}
+
+}
+
+@media (max-width:600px){
+    #wrapper{
+        grid-template-rows: 110px 500px auto auto auto;
+        grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "nav nav nav nav"
+        "main2 main2 main2 main2"
+        "img img img img"
+        "side side side side"
+        "footer footer footer footer";
+}
+    #header h1{
+        font-size: 30;
+    }
+    .moto{
+        position: absolute;
+        left: 10px;
+    }
+    .church-menu{
+        display: none;
+    }
+    
+    #image-gallery img{
+        width: 450px;
+        height: 250px;
+        border: 2px solid whitesmoke;
+    
+    }
+    .inner-heading{
+        position: absolute;
+        bottom: 50px;
+        left: 90px;
+    }
+    
+    .inner-heading h1{
+        font-size: 25px;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        top: 100px;
+        font-size: 40px;
+        color: thistle;
+        cursor: pointer;
+        
+    }
+    input[type=checkbox]:checked~
+    .church-menu{
+        position: absolute;
+        top: 150px;
+        left:-30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .church-menu li{
+        padding: 20px 50px;
+        
+    }
+    
+}
+
+
