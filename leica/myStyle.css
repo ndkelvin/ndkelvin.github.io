@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+}
+body {
+    background-color: red;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+#wrapper{
+    max-width: 1100px;
+    background-color: rgb(27, 25, 25);
+    margin: 30px auto;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#header ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#header ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+#header ul li:hover {
+    background-color: red;
+    border-radius: 10px;
+    transition: 1s ease-in;
+    cursor: pointer;
+}
+.leica-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.heading-m6{
+    font-family: Dancing Script, valentine vibes, sans-serif;
+    font-weight: bolder;
+    font-size: 5rem;
+    position: relative;
+    top: 6rem;
+    left: 2rem;
+    animation-name: leica;
+    animation-duration: 3s;
+    transition: 2s ease-in;
+}
+@keyframes leica{
+    from {top: -30px}
+    to {top: 150px}
+}
+.camera {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    transform: rotate(-5deg);
+    margin: 100px auto;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+.article {
+    width: 50%;
+    float: right;
+    margin-bottom: 40px;
+    margin-right: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 20px;
+    clear: both;
+    
+}
+
+.social-links{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.social-links li {
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 20px;
+}
+
+@media (max-width: 500px){
+.social-links li{
+    padding: 5px 10px;
+}
+}
+@media (max-width: 500px){
+    .heading-m6{
+    font-size: 5rem;
+}
+}
+
+@media (max-width: 500px){
+    #wrapper{
+    margin: 0 20px;
+}
+}
