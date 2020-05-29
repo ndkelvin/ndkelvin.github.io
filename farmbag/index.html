@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="font/css/font-awesome.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses'],
+                ['2004', 1000, 400],
+                ['2005', 1170, 460],
+                ['2006', 660, 1120],
+                ['2007', 1030, 540]
+            ]);
+
+            var options = {
+                title: 'Company Performance',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMBAG | Dashboard</title>
+</head>
+<body>
+
+    <div class="sidebar-wrapper" id="mySidenav">
+        <ul class="sidebar-list">
+            <li><a href="javascript: void (0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+            <li><a href=""><span class="fa fa-dashboard"></span></span> My Dashboard</a></li>
+            <li><a href=""><span class="fa fa-user-circle-o"></span> My Profile</a></li>
+            <li><a href=""><span class="fa fa-briefcase"></span> My Client(s)</a></li>
+            <li><a href=""><span class="fa fa-money"></span> My Products</a></li>
+        </ul>
+    </div>
+    <span onclick="openNav()" class="open"><span class="fa fa-angle-double-right"><span
+                class="fa fa-angle-double-right"></span></span></span>
+
+    <div id="wrapper">
+        <nav class="navbar navbar-expand-md navbar-light p-3 navbarlink">
+            <a href="index.html" class="navbar-brand" style="color: green;">FarmBAG</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collpase navbar-collapse" id="myNav">
+                <ul class="navbar nav" id="navLink">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Farmers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><span class="fa fa-envelope"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><span class="fa fa-user-circle myUser"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div class="row fluid">
+                <div class="col-md-4">
+                    <div class="box box1">
+                        <h3>Total Products</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box box2">
+                        <h3>Total Clients</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box box3">
+                        <h3>My Customers</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-1"></div>
+                <div class="col-md-1">
+                    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2020 Copyright OB Media Ventures<br> Developed and maintained by Tectainet Technologies </p>
+            <ul class="social-links">
+                <li class="fa fa-facebook"></li>
+                <li class="fa fa-twitter"></li>
+                <li class="fa fa-whatsapp"></li>
+                <li class="fa fa-instagram"></li>
+                </span>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

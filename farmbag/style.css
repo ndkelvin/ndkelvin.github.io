@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:before, 
+*:after{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    position: relative;
+    background-color: rgb(228, 247, 246);
+}
+a{
+    text-decoration: none;
+}
+
+.open{
+    cursor: pointer;
+    font-size: 50px;
+    color: red;
+}
+.sidebar-wrapper{
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    height: 100%;
+    background-color: #121;
+    transition: all 1s;
+}
+
+.closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+    font-size: 50px;
+}
+.sidebar-wrapper ul{
+    margin: 0;
+    text-align: right;
+}
+.sidebar-wrapper li {
+    list-style-type: none;
+    padding: 30px 10px;
+    border-bottom: 1px solid rgba(300, 300, 300, 0.1);
+}
+
+.sidebar-wrapper a{
+    color: black;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.sidebar-wrapper li:hover{
+    background-color: red;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
+.sidebar-wrapper a:hover{
+    text-decoration: none;
+}
+
+#wrapper{
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px;
+}
+#myNav a{
+    font-size: 15px;
+}
+#myNav{
+    justify-content: flex-end;
+}
+
+#navLink a{
+    color: #000;
+}
+
+.myUser{
+    font-size: 50px;
+}
+.navbar-brand{
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 1px 1px black;
+    border: 1px solid;
+    padding: 5px 10px;
+}
+#navLink li a:hover{
+    background-color: #999;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+.navbarlink{
+    box-shadow: 2px 2px 2px black;
+    background-color:none;
+}
+
+.box{
+    width: 300px;
+    height: 200px;
+    background: none;
+    border-radius: 5px;
+    box-shadow:  2px 2px 2px gray;
+}
+
+.box h3{
+    background: #121;
+    color: #eee;
+    border-radius: 5px;
+    padding: 7px 0;
+    text-align: center;
+    position: relative;
+    top: -1rem;
+    left: 1rem;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #121;
+    padding: 15px;
+    color: white;
+    display: flex; 
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.social-links li{
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+@media(max-width:600px){
+    .social-links ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        flex-direction: column;
+        height: 120px;
+    }
+}
+@media (max-width: 768px){
+    #navLink{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
