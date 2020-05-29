@@ -29,6 +29,7 @@ a{
     height: 100%;
     background-color: #121;
     transition: all 1s;
+    color: #fff;
 }
 
 .closebtn{
@@ -41,11 +42,11 @@ a{
 .sidebar-wrapper ul{
     margin: 0;
     text-align: right;
-    font-color: #fff;
+    color: #fff;
 }
 .sidebar-wrapper li {
     list-style-type: none;
-    font-color: #fff;
+    color: #fff;
     padding: 30px 10px;
     border-bottom: 1px solid rgba(300, 300, 300, 0.1);
 }
