@@ -1,0 +1,163 @@
+:root {
+    --primary: rgb(23, 152, 212);
+
+}
+/*rgb(23, 152, 212);*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav .navbar a:hover{
+    color: #000;
+    transition: all ease-in-out 2s;
+}
+
+#section-a {
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(images/doctor1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+#section-a .heading {
+    position: relative;
+    top: 12rem;
+    left: -20rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+#section-a .heading a{
+    padding: 10px 30px;
+    background-color: orange;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #fff;
+}
+
+#section-a .heading h1{
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color:  rgb(23, 152, 212); 
+}
+.heading{
+    animation: bioflourish 5s 1;
+    animation-direction: reverse;
+}
+
+#section-a .heading a:hover{
+    background-color: orangered;
+    transition: all 3s ease;
+
+}
+@keyframes bioflourish {
+    
+    25% {left: 0px; right: 0px;}
+}
+#section-b {
+    text-align: justify;
+    position: relative;
+}
+
+#section-b .container{
+    padding: 0 4rem;
+}
+
+#section-b .container .row .col-md-4{
+    padding: 0 1px;
+}
+#section-b .container .row .col-md-4>div{
+    background-color: rgb(10, 119, 207);
+    position: relative;
+    top: -40px;
+    padding: 1rem;
+    color: #fff;
+}
+
+#section-b .right{
+    text-align: center;
+}
+
+#section-b .left{
+    text-align: center;
+}
+
+#section-b .center{
+    text-align: center;
+}
+
+#section-b .fa{
+    font-size: 3rem;
+}
+
+#section-b .left p{
+    text-align: justify;
+}
+#section-b .right p{
+    text-align: justify;
+}
+#section-b .center p{
+    text-align: justify;
+}
+
+#section-c{
+    margin: 0 10px;
+}
+#section-c h4{
+    text-align: center;
+    font-weight: bold;
+}
+footer{
+    background-color: rgb(7, 17, 22);
+    color: #fff;
+    padding-top: 3rem;
+    text-align: center;
+}
+footer .connect{
+    text-align: center;
+}
+footer .connect li{
+    font-size: 2rem;
+    border: 1px solid #fff;
+    padding: 10px 1rem;
+}
+
+@media(max-width:990px){
+    #section-a .heading {
+        top: 12rem;
+        left: -10rem;        
+    }
+}
+
+@media(max-width:700px){
+    #section-a .heading {
+        top: 12rem;
+        left: -80px;        
+    }
+    footer .connect li{
+        font-size: 1.5rem;
+        border: 1px solid #fff;
+        padding: 10px 1rem;
+    }
+}
+@media (max-width: 600px){
+    .navabar-content {flex-direction: column;}
+    .navabar-content li {width: 100%;}
+    .navabar-content li:hover {background-color: rgb(246, 247, 243); color: #fff; transition: all 1s ease-in;}
+    footer .connect li{ font-size: 1rem; border: 1px solid #fff; padding: 10px 1rem;}
+    footer .contact h3{font-size: 1.5rem;}
+    footer .connect h3{font-size: 1.5rem;}
+    footer{
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width:500px){#section-a .heading {top: 12rem;left: -70px;}
+    #section-a .heading h1{font-size: 2rem;}
+}
