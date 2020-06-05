@@ -158,8 +158,8 @@ footer .connect li{
 
 }
 
-@media(max-width:500px){#section-a .heading {top: 12rem;left: -70px;}
-    #section-a {font-size: 14px;}
+@media(max-width:500px){#section-a .heading {top: 12rem;left: -50px;}
+    #section-a {font-size: 12px;}
     #section-a .heading h1{font-size: 1.5rem;}
     #section-a .heading a {margin-top: 10px; padding: 5px 10px;font-size: 14px;}
 }
