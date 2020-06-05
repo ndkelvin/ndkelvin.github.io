@@ -152,14 +152,12 @@ footer .connect li{
     footer .connect li{ font-size: 1rem; border: 1px solid #fff; padding: 10px 1rem;}
     footer .contact h3{font-size: 1.5rem;}
     footer .connect h3{font-size: 1.5rem;}
-    footer{
-        font-size: 15px;
-    }
+    footer{font-size: 15px;}
 
 }
 
-@media(max-width:500px){#section-a .heading {top: 12rem;left: -50px;}
+@media(max-width:500px){#section-a .heading {top: 12rem;left: -40px;}
     #section-a {font-size: 12px;}
     #section-a .heading h1{font-size: 1.5rem;}
-    #section-a .heading a {margin-top: 10px; padding: 5px 10px;font-size: 14px;}
+    #section-a .heading a {margin-top: 10px; padding: 5px 10px;font-size: 12px;}
 }
