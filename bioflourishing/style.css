@@ -146,6 +146,8 @@ footer .connect li{
     }
 }
 @media (max-width: 600px){
+    #section-a {font-size: 15px;}
+    #section-a .heading h1{font-size: 2rem;}
     .navabar-content {flex-direction: column;}
     .navabar-content li {width: 100%;}
     .navabar-content li:hover {background-color: rgb(246, 247, 243); color: #fff; transition: all 1s ease-in;}
