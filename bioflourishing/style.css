@@ -11,53 +11,64 @@
 }
 
 nav .navbar a:hover{
-    color: #000;
-    transition: all ease-in-out 2s;
+    color: red;
+    transition: all ease-in-out .5s;
+    transform: scale(1.1);
 }
 
 #section-a {
-    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(images/doctor1.jpg);
+    position: relative;
+    background: url(images/doctor2.jpg);
     background-size: 100%;
     background-position: center;
     width: 100;
     height: 100vh;
     background-repeat: no-repeat;
 }
-#section-a .heading {
-    position: relative;
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     top: 12rem;
-    left: -20rem;
-    font-weight: bold;
-    text-align: center;
-    color: #000;
+    left: 3rem;
 }
+.header{
+    animation: heading;
+    animation-duration: 5s;
+    transition: all 1s ease-in;
 
-#section-a .heading a{
-    padding: 10px 30px;
-    background-color: orange;
-    border-radius: 20px;
-    font-size: 15px;
-    color: #fff;
 }
-
-#section-a .heading h1{
-    font-size: 2.5rem; 
-    font-weight: bold; 
-    color:  rgb(23, 152, 212); 
-}
-.heading{
-    animation: bioflourish 5s 1;
+.header .btn{
+    animation: link;
+    animation-duration: 5s;
+    transition: all 5s ease-in;
     animation-direction: reverse;
 }
 
-#section-a .heading a:hover{
-    background-color: orangered;
-    transition: all 3s ease;
 
+@keyframes heading{
+    from{top: 0px;}
+    to {top: 200px;}
 }
-@keyframes bioflourish {
-    
-    25% {left: 0px; right: 0px;}
+@keyframes link{
+    from{top: 10px;}
+    to {top: 1000px;}
+}
+.header a{
+    background-color: orange;
+}
+
+.header a:hover{
+    background-color: red;
+    color: white;
+    transition: all 1s ease-in;
+}
+.header h1{
+    color: var(--primary);
+    line-height: 2rem;
 }
 #section-b {
     text-align: justify;
@@ -70,6 +81,11 @@ nav .navbar a:hover{
 
 #section-b .container .row .col-md-4{
     padding: 0 1px;
+}
+#section-b .container .row .col-md-4>div:hover{
+   cursor: pointer;
+   transform: scale(1.01);
+   background-color: rgb(71, 9, 43);
 }
 #section-b .container .row .col-md-4>div{
     background-color: rgb(10, 119, 207);
@@ -128,18 +144,16 @@ footer .connect li{
 }
 
 @media(max-width:990px){
-    #section-a .heading {
-        top: 12rem;
-        left: -10rem;        
-    }
+    #section-a {font-size: 15px;}
+    #section-a .heading h1{font-size: 2rem;}
+    #section-b h3{font-size: 1.5rem;}
+    #section-b a{font-size: 14px;}
 }
 
 @media(max-width:700px){
-    #section-a {font-size: 15px;}
-    #section-a .heading h1{font-size: 2rem;}
-    #section-a .heading {
-        top: 12rem;
-        left: -80px;        
+    #section-b .container {
+        position: relative;
+        top: -5rem;
     }
     footer .connect li{
         font-size: 1.5rem;
@@ -148,20 +162,23 @@ footer .connect li{
     }
 }
 @media (max-width: 600px){
+    #section-b {top: -3rem}
     #section-a {font-size: 15px;}
-    #section-a .heading h1{font-size: 2rem;}
+    #section-a .header h1{font-size: 1.5rem;}
     .navabar-content {flex-direction: column;}
     .navabar-content li {width: 100%;}
     .navabar-content li:hover {background-color: rgb(246, 247, 243); color: #fff; transition: all 1s ease-in;}
     footer .connect li{ font-size: 1rem; border: 1px solid #fff; padding: 10px 1rem;}
-    footer .contact h3{font-size: 1.5rem;}
-    footer .connect h3{font-size: 1.5rem;}
-    footer{font-size: 15px;}
+    footer .contact h3{font-size: 1.2rem;}
+    footer .connect h3{font-size: 1.2rem;}
+    footer{font-size: 14px;}
 
 }
 
-@media(max-width:500px){#section-a .heading {top: 12rem;left: -40px;}
+@media(max-width:500px){
     #section-a {font-size: 12px;}
-    #section-a .heading h1{font-size: 1.5rem;}
-    #section-a .heading a {margin-top: 10px; padding: 5px 10px;font-size: 12px;}
+    #section-a .header h1{font-size: 1.5rem;}
+    #section-a .header a {padding: 5px 10px;font-size: 12px;}
+    #section-a .header h1{ line-height: 18px;}
+    #section-a p{font-size: 12px;}
 }
