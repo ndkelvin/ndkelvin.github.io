@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    position: relative;
+  
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-a {
+    background: radial-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)), url(images/doctor2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    padding-top: 10rem;
+    animation: change-background-image 10s infinite 6s alternate;
+}
+
+@keyframes change-background-image {
+    0% {background: radial-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)), url(images/pexels-photo-2280551.jpeg) no-repeat center;
+        background-size: cover; height: 100vh;} 
+        
+    25% {background: radial-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)), url(images/doctor2.jpg) no-repeat center;
+        background-size: cover; height: 100vh;}
+    50% {background: radial-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)), url(images/pexels-photo-48604.jpeg) no-repeat center;
+        background-size: cover; height: 100vh;}
+    100% {background: radial-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)), url(images/thermometer-headache-pain-pills-139398.jpeg) no-repeat center;
+         background-size: cover; height: 100vh;}
+    }
+
+#section-a .inner-content {
+   width: 60%;
+   text-align: center;
+   margin-left: 2rem;
+   margin-top: 2rem;
+  
+}
+#section-a h1 {
+    font-size: 2.5rem;
+    line-height: 1.5rem;
+    color: rgb(15, 139, 177);
+    animation: change 2s infinite 3s  alternate forwards;
+}
+@keyframes change {
+    from {color: rgb(15, 139, 177);}
+    to {color: #000}
+}
+#section-a h3 {
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+}
+#section-a a{
+    background-color: orangered;
+    color: #fff;
+    font-size: 1rem;
+    padding: .6rem 1.2rem;
+    border-radius: 15px;
+    transition: all .5s ease-out;
+}
+
+#section-a .fa {
+    position: relative;
+    animation: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    from {left:0px}
+    to {left: 10px}
+}
+
+#section-a a:hover {
+    background-color: rgb(112, 12, 59);
+    color: #fff;
+    box-shadow: 1px 1px 4px #000;
+    text-decoration: none;
+}
+#section-b {
+    position: relative;
+    bottom: 2rem;
+    display: flex;
+    margin: 1rem 2rem;
+}
+
+#section-b>div {
+    padding: 2rem;
+    background-color: rgb(3, 73, 119);
+    color: #fff;
+}
+
+#section-b>div:hover {
+    background-color: rgb(56, 5, 35);
+    transition: all .5s ease-in;
+    cursor: pointer;
+}
+#section-b h3 {
+    text-align: center;
+}
+
+#section-b .fa {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+#section-b>div:not(:last-child) {
+    border-right: 2px solid white;
+}
+
+#section-b button {
+    padding: 5px 10px;
+    border: none;
+}
+.jumbotron {
+    margin: -2.5rem 2rem 0 2rem;
+}
+
+.jumbotron h5 {
+    font-size: 2rem;
+    text-align: center;
+}
+.jumbotron h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+footer .connectwithus .fa {
+    font-size: 2.5rem;
+    padding: 0 1rem;
+}
+
+footer .connectwithus .fa:hover {
+    transform: scale(1.5);
+    transition: 1s all linear;
+}
+@media (max-width: 768px) {
+    #section-b {flex-direction: column;}
+    #section-b>div:not(:first-child) {border-top: 3px solid white;}
+    #section-a h1 {font-size: 1.5rem;}
+    #section-a h3 {font-size: 1rem; padding-bottom: .8rem;}
+    #section-a a {font-size: .7rem;}
+    footer {flex-direction: column; font-size: .9rem;}
+    footer h4 {font-size: 1.5rem;}
+    footer .connectwithus .fa {font-size: 1.5rem;}
+}
+
