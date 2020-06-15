@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #000;
+    font-size: 2rem;
+}
+
+#myNav .navbar-nav .nav-item .nav-link:hover {
+    color: green;
+}
+nav li {
+    padding: 0 10px;
+}
+
+#section-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(images/farm4.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+    clip-path: polygon(0 0, 0 100%, 100% 90%, 100% 0);
+    margin-bottom: 2rem;
+}
+
+#section-a img {
+    margin-bottom: 2rem;
+}
+#section-a h1:nth-child(even) {
+    color: red;
+}
+#section-a h1 {
+    font-weight: bolder;
+    font-size: 4rem;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.left {
+    background-color: rgb(2, 34, 2);
+    padding: 0;
+}
+.right {
+    background-color: rgb(2, 34, 2);
+}
+#myCarousel .carousel-item{
+    text-align: center;
+    color: #fff;
+}
+
+#myCarousel {
+   padding-top: 20%; 
+}
+
+#myCarousel .carousel-item {
+    transition: 2s ease-in all;
+}
+
+#myCarousel .carousel-item h1 {
+    font-size: 3rem;
+}
+#myCarousel .carousel-item p {
+    padding: 1rem 5rem;
+    font-size: 2rem;
+}
+
+.section-c {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.section-c .col-md-6{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(images/farm.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    height: 50%;
+    padding: 4rem;
+}
+
+.section-c .col-md-6 p {
+    font-size: 2rem;
+}
+
+.section-c .col-md-6 h2 {
+    font-size: 3rem;
+}
+
+.section-c .right-hand{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(images/farm2.jpg) no-repeat center;
+    background-size: 100% 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.section-c button {
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 50px;
+    background-color: rgb(7, 83, 41);
+    font-size: 1.8rem;
+}
+
+#section-d{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(images/tea-farmers-harvesting-at-a-farm.jpg) no-repeat center;
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    padding: 4rem;
+    background-color: #999;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#section-d p {
+    font-size: 2.5rem;
+    width: 50%;
+}
+#section-d button {
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 50px;
+    background-color: rgb(7, 83, 41);
+    font-size: 1.8rem;
+}
+
+footer .col-md-6 {
+    text-align: center;
+    font-size: 2rem;
+    background-color: rgb(7, 83, 41);
+    color: #fff;
+    padding: 4rem 1rem;
+}
+
+footer .fa {
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.fa-facebook-f {
+    background-color: rgb(7, 20, 204);
+    border-radius: 20px;
+}
+.fa-twitter {
+    background-color: rgb(16, 152, 194);
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.fa-instagram {
+    background-color: #000;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    #section-a h1 {
+        font-size: 3rem;
+    }
+    nav li {
+        font-size: 1.5rem;
+    }
+    #section-d p {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    footer .fa {
+        margin: 0;
+    }
+}
